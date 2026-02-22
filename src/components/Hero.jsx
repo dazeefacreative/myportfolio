@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import heroImage from "../assets/images/dazeefa.png"
 import backdrop from "../assets/images/backdrop.png"
+import cv from "../resume/Dazeefa Resume Web Design & Dev.pdf"
 
 export default function Hero(){
     const [phraseIndex, setPhraseIndex] = useState(0);
@@ -133,7 +134,9 @@ export default function Hero(){
                     <p className="opacity-60 text-sm mb-10">I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website or social media designs, send me an email.</p>
                     
                     <div className="flex gap-8">
-                        <button className="flex items-center gap-2 border border-gray-100 py-2 px-4 hover:scale-105 transition-transform">
+                        <button 
+                        onClick={() => window.open(cv, "_blank")}
+                        className="flex items-center gap-2 border border-gray-100 py-2 px-4 hover:scale-105 transition-transform">
                             <span className="text-xs">Download CV</span>
                             <Icon icon={"tabler:arrow-badge-down"} />
                         </button>
