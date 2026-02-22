@@ -17,7 +17,7 @@ export default function Services(){
                         transition={{duration: 0.7, delay: 0.3, ease: "anticipate"}}
                         viewport={{once: true}}
 
-                        className="text-4xl lg:text-6xl max-w-sm  text-center sm:text-start">
+                        className="text-4xl lg:text-5xl max-w-sm  text-center sm:text-start">
                             What I'm Offering
                             </motion.h2>
                     </div>

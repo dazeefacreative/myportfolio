@@ -27,7 +27,22 @@ export const services = [
 
 export default function ServiceCard() {
 
-  const [selectedService, setSelectedService] = useState("")
+  const [selectedService, setSelectedService] = useState(null)
+  const serviceDetails = [
+    "I design engaging, user-friendly interfaces aligned with your brand standing out from competitors. Through prototyping and user testing, I ensure visually appealing, intuitive, and functional experiences that delight your audience.",
+    
+    "I build scalable web applications with robust front-end and back-end solutions. Custom APIs, complex features, and performance optimization ensure high-quality, maintainable, and functional products tailored to your needs.",
+    
+    "I create striking social media designs that elevate brand visibility. Cohesive visuals, engaging layouts, and platform-specific strategies help connect with your audience and strengthen your online presence effectively."
+  ]
+
+  const handleServiceClick = (index) => {
+    if (selectedService === null){
+      setSelectedService(index)
+    } else {
+      setSelectedService(null)
+    }
+  }
 
   return (
     <>
@@ -43,21 +58,30 @@ export default function ServiceCard() {
     dragElastic={0.7} // elasticity when dragging
     whileDrag={{ scale: 1.05, cursor: "grabbing" }} // slightly enlarge while dragging
     whileDragEnd={{ type: "spring", stiffness: 500, damping: 30 }}
+    viewport={{once: true}}
     layout // enables smooth layout adjustments for other cards
 
     key={index}
-    className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col uppercase justify-between py-12 px-8 gap-8 cursor-grab bg-dark group hover:border-none active:border-none active:bg-gradient-to-b from-primary to-secondary hover:bg-gradient-to-b transition-colors duration-400"
+    className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col justify-between py-12 px-8 gap-8 cursor-grab bg-dark group hover:border-none active:border-none active:bg-gradient-to-b from-primary to-secondary hover:bg-gradient-to-b transition-colors duration-400"
     > 
 
-      <service.icon className="w-12 h-12 group-active:text-dark group-hover:text-dark transition-colors duration-200" />
-      <h3 className="text-2xl max-w-[150px] group-active:text-dark group-hover:text-dark transition-colors duration-200">
-        {service.title}
-      </h3>
+      {selectedService !== index && 
+        <service.icon className="w-12 h-12 group-active:text-dark group-hover:text-dark transition-colors duration-200" />
+      }
+      {selectedService !== index && 
+        <h3 className="text-2xl max-w-[150px] uppercase group-active:text-dark group-hover:text-dark transition-colors duration-200">
+          {service.title}
+        </h3>
+      }
+
+      {selectedService === index &&
+        <p className="text-sm group-active:text-dark group-hover:text-dark leading-[140%] transition-colors duration-200">{serviceDetails[index]}</p>
+      }
       <button 
       value={service.title}
-      onClick={(e)=> setSelectedService(e.target.value)}
-      className="flex gap-4 items-center hover:gap-6 group-active:text-dark group-hover:text-dark transition-colors duration-200">
-        Read More <Icon icon={"tabler:arrow-narrow-right-dashed"} />
+      onClick={() => handleServiceClick(index)}
+      className="flex gap-2 items-center hover:gap-4 group-active:text-dark group-hover:text-dark transition-colors duration-200">
+        {selectedService === index ? "Close" : "Read More"} <Icon icon={selectedService === index ? "tabler:letter-x" : "tabler:arrow-narrow-right-dashed"} />
       </button>
 
     </motion.div>

@@ -65,7 +65,7 @@ export default function Hero(){
                     transition={{ duration: 1, ease: "easeOut" }}
                 />
 
-                <div className="flex items-center">
+                <header className="flex items-center">
                     <div className="w-full z-10 min-w-[310px] mx-auto lg:min-w-[500px]">
                         <motion.span 
                         initial={{ opacity: 0, x: 80 }}
@@ -79,7 +79,7 @@ export default function Hero(){
                         initial={{ opacity: 0, x: 80 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                        className="text-3xl lg:text-4xl h-24 max-w-[225px] sm:max-w-[270px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        className="text-3xl lg:text-4xl h-24 max-w-[225px] sm:max-w-[300px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                          {displayText}
                         </motion.h1>
                         )}
@@ -120,7 +120,7 @@ export default function Hero(){
                     >
                         <img src={heroImage} className="w-full h-full object-cover" />
                     </motion.div>
-                </div>
+                </header>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}

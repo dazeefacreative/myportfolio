@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const links = [
   { href: "#services", label: "Services" },
-  { href: "#works", label: "Works" },
+  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -49,11 +49,11 @@ export default function Header(){
                         animate={{ opacity: 0.7, x: 0 }}
                         whileHover={{ opacity: 1, transition: { duration: 0.2, ease: "easeInOut" } }}
                         transition={{duration: 0.7, delay: 0.4, ease: "easeInOut"}}
-                        onClick={() => scrollToSection("works")}
+                        onClick={() => scrollToSection("projects")}
 
                         className="group flex flex-col items-center font-lufga px-3 py-2 rounded text-[0.95rem] no-underline transition-colors duration-200 ease-in-out active:opacity-80 opacity-70 hover:opacity-100"
                         >
-                        Works
+                        Projects
                         <div className="w-1 h-1 opacity-0 group-hover:opacity-100 group-hover:animate-pulse group-hover:w-4 font-black bg-primary transition-all duration-500 rounded-full"></div>
                         </motion.button>
 

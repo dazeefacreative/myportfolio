@@ -140,7 +140,7 @@ export default function Contact(){
                                 <div 
                                 required
                                 onClick={()=>{setOpenOptions(!openOptions)}}
-                                className={`text-sm bg-dark w-full p-4 pl-12 ${selectedService === "Pick a service"? "text-gray-400" : "text-gray-300 " }`}>{selectedService || "Select a service"}</div>
+                                className={`text-sm bg-dark w-full p-4 pl-12 ${selectedService === null? "text-gray-400" : "text-gray-300 " }`}>{selectedService || "Select a service"}</div>
                                 
                                 {openOptions &&                                
                                 <ui                                 
@@ -280,7 +280,7 @@ export default function Contact(){
                         {message.success && <span className="text-sm text-green-500">{message.success}</span>}
                         </div>
 
-                        <button type="submit" disabled={loading} className="w-full items-center font-bold justify-center tracking-tightest bg-gradient-to-r from-primary to-secondary p-2 disabled:cursor-not-allowed disabled:opacity-50 flex disabled:bg-gradient-to-r disabled:from-gray-500 disabled:to-gray-700">
+                        <button type="submit" disabled={loading} className="w-full items-center text-veryDark font-bold justify-center tracking-tightest bg-gradient-to-r from-primary to-secondary p-2 disabled:cursor-not-allowed disabled:opacity-50 flex disabled:bg-gradient-to-r disabled:from-gray-500 disabled:text-white disabled:to-gray-700 hover:scale-105 transition-transform duration-300">
                             {loading ? "Submitting" : "Submit Form"}                                     
                             <Icon icon={loading ? "svg-spinners:90-ring" : "tabler:arrow-badge-right"} className="inline-block ml-2 w-5 h-5" />
                         </button>

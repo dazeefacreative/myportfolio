@@ -11,7 +11,7 @@ export default {
         secondary: "#79c152",
         body: "#F7F7F5",
         dark: "#222222",
-        veryDark:"#101915"
+        veryDark:"#161616"
       },
       fontFamily:{
         heading: "Abril Fatface, serif",

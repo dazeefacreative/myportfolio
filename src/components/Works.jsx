@@ -66,7 +66,7 @@ export default function Works(){
 
 
     return(
-        <section id="works">
+        <section id="projects">
             <div className="w-full max-w-6xl mx-auto px-6 py-12">
                 <motion.h2 
                 initial={{opacity: 0, y:-80}}
@@ -74,7 +74,7 @@ export default function Works(){
                 transition={{duration: 0.7, ease: "easeIn"}}
                 viewport={{once: true}}
             
-                className="text-center text-4xl">Case Study</motion.h2>
+                className="text-center text-4xl">Selected Projects</motion.h2>
                 <motion.p
                 initial={{opacity: 0, scale: 0.6}} 
                 whileInView={{opacity: 1, scale: 1}}

@@ -68,7 +68,7 @@ export default function Skills(){
                     >  
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -83,7 +83,7 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -98,7 +98,7 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -113,13 +113,13 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
                             <Icon icon={"logos:react"} className="absolute -top-5 left-5 text-4xl" />
                             <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">React</span>
+                                <span className="text-sm opacity-80">React.js</span>
                                 <span className="text-sm opacity-50">90%</span>
                             </div>
                             <div className="w-full h-1 bg-gray-700 rounded-full">
@@ -128,22 +128,22 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
                             <Icon icon={"logos:javascript"} className="absolute -top-5 left-5 text-4xl" />
                             <div className="flex w-full justify-between">
                                 <span className="text-sm opacity-80">JavaScript</span>
-                                <span className="text-sm opacity-50">80%</span>
+                                <span className="text-sm opacity-50">90%</span>
                             </div>
                             <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full w-[80%]"></div>
+                                <div className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full w-[90%]"></div>
                             </div>
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -158,7 +158,7 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -173,7 +173,7 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
@@ -188,17 +188,17 @@ export default function Skills(){
                         </motion.div>
                         <motion.div
                             variants={cardVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.15 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
-                            <Icon icon={"skill-icons:mysql-dark"} className="absolute -top-5 left-5 text-4xl" />
+                            <Icon icon={"logos:postgresql"} className="absolute -top-5 left-5 text-4xl" />
                             <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">MySQL Database</span>
+                                <span className="text-sm opacity-80">Postgres</span>
                                 <span className="text-sm opacity-50">85%</span>
                             </div>
                             <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-gray-800 to-gray-400 rounded-full w-[85%]"></div>
+                                <div className="h-full bg-gradient-to-r from-cyan-900 to-cyan-400 rounded-full w-[85%]"></div>
                             </div>
                         </motion.div>                    
                     </motion.div>
