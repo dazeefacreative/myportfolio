@@ -19,6 +19,9 @@ export default function Hero(){
     "Senior Graphics Designer"
     ];
 
+    const introTitle = "I research problems, design solutions, and build products that work."
+    const introText = "I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website or social media designs, send me an email."
+
     const skills = [
     "Web Design", 
     "Full Stack Develeopment", 
@@ -80,7 +83,7 @@ export default function Hero(){
                         initial={{ opacity: 0, x: 80 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                        className="text-3xl lg:text-4xl h-24 max-w-[225px] sm:max-w-[300px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        className="text-3xl lg:text-4xl h-24 max-w-[250px] sm:max-w-[300px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                          {displayText}
                         </motion.h1>
                         )}
@@ -93,11 +96,22 @@ export default function Hero(){
                         >
 
                             <span className="text-xs opacity-50 tracking-[3px]">- Introduction</span>
-                            <h3 className="font-body text-2xl mb-5">I research problems, design solutions, and build products that work.</h3>
-                            <p className="opacity-60 text-sm mb-10">I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website or social media designs, send me an email.</p>
-                            <div className="flex text-primary items-center gap-2 hover:gap-4">
-                                <a href="https://wa.me/2347082816283?text=Let's%20talk" className="underline underline-offset-3 text-xs">Let's talk</a>
-                                <Icon icon={"tabler:arrow-badge-right"} />
+                            <h3 className="font-body text-2xl mb-5">{introTitle}</h3>
+                            <p className="opacity-60 text-sm mb-10">{introText}</p>
+
+                            <div className="flex items-center gap-8">
+                                <button 
+                                onClick={() => window.open(cv, "_blank")}
+                                className="flex items-center gap-2 text-sm border border-gray-100 py-2 px-4 hover:scale-105 transition-transform">  
+                                    <span>Download CV</span>
+                                    <Icon icon={"tabler:arrow-badge-down"} />
+                                </button>
+                                <a 
+                                href="https://wa.me/2347082816283?text=Let's%20talk" 
+                                className="flex text-primary items-center gap-4 underline underline-offset-3 text-sm">
+                                    <span>Let's talk</span>
+                                    <Icon icon={"tabler:arrow-badge-right"} />
+                                </a>
                             </div>
                         </motion.div>
                         <motion.div
@@ -107,9 +121,9 @@ export default function Hero(){
                             className="flex gap-2 mt-16 lg:mt-32"
                         >
 
-                            <a href="https://github.com/dazeefacreative"><Icon icon={"logos:github-icon"} className="hover:animate-bounce bg-white rounded-sm p-0.5"/></a>
-                            <a href="https://behance.net/dazeefacreative"><Icon icon={"streamline-logos:behance-logo-block"} className="hover:animate-bounce"/></a>
-                            <a href="https://linkedin.com/in/dazeefacreative"><Icon icon={"streamline-logos:linkedin-logo-block"} className="hover:animate-bounce"/></a>
+                            <a href="https://github.com/dazeefacreative"><Icon icon={"logos:github-icon"} className="hover:animate-bounce bg-white rounded-md p-0.5 size-8 sm:size-6"/></a>
+                            <a href="https://behance.net/dazeefacreative"><Icon icon={"streamline-logos:behance-logo-block"} className="hover:animate-bounce size-8 sm:size-6"/></a>
+                            <a href="https://linkedin.com/in/dazeefacreative"><Icon icon={"streamline-logos:linkedin-logo-block"} className="hover:animate-bounce size-8 sm:size-6"/></a>
                         </motion.div>
                     </div>
                     <motion.div
@@ -130,14 +144,14 @@ export default function Hero(){
                 >
 
                     <span className="text-xs opacity-50 tracking-[3px] before:content-['-'] before:mr-1">Introduction</span>
-                    <h3 className="font-body text-2xl mb-5">I research problems, design solutions, and build products that work.</h3>
-                    <p className="opacity-60 text-sm mb-10">I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website or social media designs, send me an email.</p>
+                    <h3 className="font-body text-2xl mb-5">{introTitle}</h3>
+                    <p className="opacity-60 text-sm mb-10">{introText}</p>
                     
                     <div className="flex gap-8">
                         <button 
                         onClick={() => window.open(cv, "_blank")}
-                        className="flex items-center gap-2 border border-gray-100 py-2 px-4 hover:scale-105 transition-transform">
-                            <span className="text-xs">Download CV</span>
+                        className="flex items-center gap-2 text-sm border border-gray-100 py-2 px-4 hover:scale-105 transition-transform">
+                            <span>Download CV</span>
                             <Icon icon={"tabler:arrow-badge-down"} />
                         </button>
                         <div className="flex text-primary items-center gap-2 hover:gap-4">

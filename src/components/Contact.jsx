@@ -112,7 +112,7 @@ export default function Contact(){
                     </div>
                     <div className="flex flex-col items-start gap-2">
                         <a 
-                        href="mailto:hire@dazeefa.com"
+                        href="mailto:hire@dazeefa.com?subject=New%20Project%20Request"
                         className="group p-2 border border-gray-100 mb-4" >
                             <Icon icon="line-md:email-alt-filled" className="w-8 h-8" />
                         </a>

@@ -72,7 +72,7 @@ export default function Header(){
                     </div>
                     {/* Mobile Hamburger */}
                     <button
-                    className="md:hidden inline-flex items-center justify-center text-cherry-red p-2"
+                    className="md:hidden inline-flex items-center justify-center text-cherry-red p-2 z-30"
                     onClick={() => setOpen(!open)}
                     aria-label="Toggle Menu"
                     >
@@ -81,17 +81,18 @@ export default function Header(){
                 </div>
             </nav>
             <div
-                className={`md:hidden fixed left-1/2 -translate-x-1/2 top-[70px] z-[49] w-full shadow-md transition-all duration-300 ${
+                className={`md:hidden absolute w-full bg-veryDark rounded-br-3xl rounded-bl-3xl overflow-hidden left-1/2 -translate-x-1/2 top-0 pt-20 pb-10 z-20 w-full shadow-md transition-all duration-300 ${
                 open
                     ? "flex opacity-100 translate-y-0"
                     : "hidden opacity-0 -translate-y-2"
-                } flex-col px-6 py-4`}
+                } flex-col gap-4 px-6 py-4`}
             >
                 {links.map((l) => (
                     <a
+                    onClick={() => {scrollToSection(l.href.substring(1)), setOpen(false)}}
                     key={l.label}
                     href={l.href}
-                    className="flex flex-col items-center font-lufga px-3 py-2 rounded text-[0.95rem] no-underline transition-colors duration-200 ease-in-out active:opacity-80 opacity-50 hover:opacity-100"
+                    className="flex flex-col items-center font-lufga px-3 py-2 rounded text-[0.95rem] no-underline transition-colors duration-200 ease-in-out active:opacity-80 hover:opacity-100"
 
                     >
                     {l.label}

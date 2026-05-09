@@ -29,7 +29,6 @@ export default function Services(){
                     className="max-w-sm lg:max-w-lg text-center sm:text-start">
                         There are many areas of service I can handle for you. Please pick one and let’s get started.
                     </motion.p>
-                    <button className="border border-gray-100 min-w-[120px] px-4 py-2 text-sm bg-transparent hover:bg-gray-100 hover:bg-opacity-20">All Services</button>
                 </div>
 
 

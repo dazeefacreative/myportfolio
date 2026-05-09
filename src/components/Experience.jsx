@@ -52,43 +52,43 @@ export default function Experience(){
                         Over the years, I have solved real-life problems using my skills, helping brands and startups complete numerous projects such as branding, social media flyers, web design, web development, Webflow development, and many more.
                         </motion.p>
                     
-                    <div className="flex max-w-sm gap-1 sm:gap-6">
+                    <div className="flex max-w-sm gap-6 items-center justify-center sm:justify-start">
 
-                        <div className="flex items-center gap-2">
-                            <Counter end={11} duration={1} className="text-2xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent" />
+                        <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                            <Counter end={11} duration={1} className="text-3xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent" />
                             <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{once: true}}
                             transition={{ duration: 0.5, delay:0.3, ease: "easeOut" }}
-                            className="text-[9px] italic sm:text-xs leading-[100%]"
+                            className="text-[12px] italic sm:text-xs leading-[100%]"
                             >
                                 Years of experience.
                             </motion.p>                        
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <Counter end={137} duration={1.2} className="text-2xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent" />
+                        <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                            <Counter end={137} duration={1.2} className="text-3xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent" />
                             <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{once: true}}
                             transition={{ duration: 0.5, delay:0.3, ease: "easeOut" }}
-                            className="text-[9px] italic sm:text-xs leading-[100%]"
+                            className="text-[12px] italic sm:text-xs leading-[100%]"
                             >
                                 complited projects.
                             </motion.p>                        
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <Counter end={96} duration={1.2} className="text-2xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent"
+                        <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                            <Counter end={96} duration={1.2} className="text-3xl md:text-4xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent"
                             />
                             <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{once: true}}
                             transition={{ duration: 0.5, delay:0.3, ease: "easeOut" }}
-                            className="text-[9px] italic sm:text-xs leading-[100%]"
+                            className="text-[12px] italic sm:text-xs leading-[100%]"
                             >
                                 Satisfied clients.
                             </motion.p>
