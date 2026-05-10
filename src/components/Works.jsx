@@ -11,33 +11,39 @@ import dawempire from "../assets/images/dawempire.png"
 
 import ignite2transform from "../assets/images/ignite2transform.png"
 
-import focusstore from "../assets/images/focusstore.png"
+import scanmyframeFeaturedImg from "../assets/images/scanframedashboard.jpg"
+
+import scanmyframe from "../assets/images/scanmyframe.png"
 
 const worksData = [
+    {
+        title: "Web Design and Development for SaaS Startup",
+        image: scanmyframe,
+        featured_image: scanmyframeFeaturedImg,
+        tags: ["web design", "web development"],
+        features: ["landing page", "dashboard", "user authentication", "responsive design", "custom blog"],
+        link: "https://scanmyframe.com"
+    },
     {
         title: "Web Design and Development for Community Brand",
         image: mumbossador,
         tags: ["web design", "web development"],
+        features: ["7+ pages website", "custom blog", "responsive design"],
         link: "https://mumbossador.com"
-    },
-       {
+    },       {
         title: "Web Development for Media Management Solutions",
         media: tdawempire,
         image: dawempire,
         tags: ["web development"],
+        features: ["5+ pages website", "responsive design"],
         link: "https://dawempire.com"
     },     
     {
         title: "Web Design and Development for Coaching Business",
         image: ignite2transform,
-        tags: ["web design", "web development"],
+        tags: ["web design", "web development", "responsive design"],
+        features: ["7+ pages website"],
         link: "https://ignite2transform.com"
-    },
-    {
-        title: "Webflow Development for e-Commerce Fashion Brand",
-        image: focusstore,
-        tags: ["webflow"],
-        link: "https://focusstore.com.ng"
     },
 ]
 
@@ -104,7 +110,7 @@ export default function Works(){
                             max-h-[240px] 
                             md:max-w-[680px] 
                             md:max-h-[400px] 
-                            bg-secondary/20 
+                            bg-[#000000]/20 
                             rounded-2xl 
                             rotate-3 group-hover:rotate-0
                             scale-105 
@@ -129,7 +135,7 @@ export default function Works(){
 
                             { !work.media ? (
                             <img
-                                src={work.image}
+                                src={work.featured_image || work.image}
                                 alt={work.title}
                                 className="w-full object-cover"
                             />
@@ -158,7 +164,7 @@ export default function Works(){
 
                         {/* Text */}
                         <div                    
-                        className={`lg:max-w-[480px] flex flex-col gap-5 mb-4 justify-between py-8 ${
+                        className={`max-w-[300px] lg:max-w-[480px] flex flex-col gap-5 mb-4 justify-between py-8 ${
                             isEven ? "lg:order-2" : "lg:order-1"
                         }`}
                         >
@@ -171,13 +177,18 @@ export default function Works(){
                             <h3 className="reveal-up sm:text-4xl text-lg font-bold md:mb-6">
                             {work.title}
                             </h3>
+                            <div className="flex flex-row gap-4 flex-wrap gap-y-1">
+                            {work.features && work.features.map((feature) =>
+                                <span className="text-[0.875rem] text-primary px-2 py-1">{feature}</span>
+                            )}
+                            </div>
                             
                             <a                             
                             onClick={()=>{setOpenIndex(index), setZoomIn(false)}}
                             className="relative overflow-hidden items-center flex w-[140px] py-2 px-3 rounded-lg bg-gradient-to-r from-[rgba(19,19,19,0.9)] to-[rgba(164,164,164,0.2)] group"
                             >
                                 <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-0"></span>
-                                <span className="relative z-10 flex items-center text-center text-white group-hover:text-black transition-colors duration-300">
+                                <span className="relative z-10 flex items-center text-center text-white cursor-pointer group-hover:text-black transition-colors duration-300">
                                     See Full Details 
                                 </span>
                             </a>
