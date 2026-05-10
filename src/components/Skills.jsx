@@ -147,13 +147,13 @@ export default function Skills(){
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
-                            <Icon icon={"logos:tailwindcss-icon"} className="absolute -top-5 left-5 text-4xl" />
+                            <Icon icon={"logos:supabase-icon"} className="absolute -top-5 left-5 text-4xl" />
                             <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">Tailwind CSS</span>
-                                <span className="text-sm opacity-50">95%</span>
+                                <span className="text-sm opacity-80">Supabase</span>
+                                <span className="text-sm opacity-50">70%</span>
                             </div>
                             <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-teal-500 to-green-500 rounded-full w-[95%]"></div>
+                                <div className="h-full bg-gradient-to-r from-teal-500 to-green-500 rounded-full w-[70%]"></div>
                             </div>
                         </motion.div>
                         <motion.div

@@ -120,7 +120,7 @@ export default function Hero(){
                             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                             className="flex gap-2 mt-16 lg:mt-32"
                         >
-
+                            <a href="https://www.instagram.com/dazeefacreative/"><Icon icon={"logos:instagram-icon"} className="hover:animate-bounce bg-white rounded-md p-0.5 size-8 sm:size-6"/></a>
                             <a href="https://github.com/dazeefacreative"><Icon icon={"logos:github-icon"} className="hover:animate-bounce bg-white rounded-md p-0.5 size-8 sm:size-6"/></a>
                             <a href="https://behance.net/dazeefacreative"><Icon icon={"streamline-logos:behance-logo-block"} className="hover:animate-bounce size-8 sm:size-6"/></a>
                             <a href="https://linkedin.com/in/dazeefacreative"><Icon icon={"streamline-logos:linkedin-logo-block"} className="hover:animate-bounce size-8 sm:size-6"/></a>
