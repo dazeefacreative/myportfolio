@@ -46,9 +46,12 @@ export default function Contact(){
         return
     }
     
-    fetch(`${import.meta.env.VITE_API_URL}/portfolio/contact`, {
+    fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-portfolio-contact`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": import.meta.env.VITE_SUPABASE_ANON_KEY,
+        },
         body: JSON.stringify({
             name: clientName,
             phone: clientPhone,
