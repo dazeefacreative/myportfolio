@@ -1,7 +1,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { Icon } from "@iconify/react"
-import { motion, press } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},

@@ -1,17 +1,60 @@
+import { Icon } from "@iconify/react";
 
-export default function Footer(){
+const socialLinks = [
+  { href: "https://www.instagram.com/dazeefacreative/", label: "Instagram" },
+  { href: "https://github.com/dazeefacreative", label: "GitHub" },
+  { href: "https://behance.net/dazeefacreative", label: "Behance" },
+  { href: "https://www.linkedin.com/in/dazeefacreative/", label: "LinkedIn" },
+];
 
-    return(
-        <footer className="py-6">
-            <div className="w-full max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <span className="text-sm">© {new Date().getFullYear()} Dazeefa Creative. All rights reserved.</span>
-                <div className="flex gap-4">
-                    <a href="https://www.instagram.com/dazeefacreative/" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-100 transition-opacity duration-300">Instagram</a>
-                    <a href="https://github.com/dazeefacreative" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-100 transition-opacity duration-300">GitHub</a>
-                    <a href="https://behance.net/dazeefacreative" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-100 transition-opacity duration-300">Behance</a>
-                    <a href="https://www.linkedin.com/in/dazeefacreative/" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-100 transition-opacity duration-300">LinkedIn</a>
-                </div>
-            </div>
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer className="py-10 border-t border-gray-800" aria-label="Site footer">
+      <div className="w-full max-w-6xl mx-auto px-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-5 mb-6">
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="text-2xl font-black"
+            aria-label="Dazeefa Creative — back to top"
+          >
+            Dazeefa<span className="text-primary">.</span>
+          </a>
+
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-2 text-xs opacity-50 hover:opacity-100 transition-opacity duration-300 group"
+            aria-label="Back to top of page"
+          >
+            Back to top
+            <Icon
+              icon="tabler:arrow-up"
+              className="group-hover:-translate-y-1 transition-transform duration-300"
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <span className="text-sm opacity-40">
+            © {new Date().getFullYear()} Dazeefa Creative. All rights reserved.
+          </span>
+          <nav className="flex gap-5" aria-label="Social links">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm opacity-50 hover:opacity-100 transition-opacity duration-300"
+                aria-label={`${link.label} profile`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </footer>
+  );
 }

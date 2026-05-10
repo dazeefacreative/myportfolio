@@ -1,23 +1,29 @@
 
-
-export default function clientCard({ client }) {
+export default function ClientCard({ client }) {
   return (
-    <div
-      className="flex flex-col sm:gap-6 h-full border border-gray-100 sm:max-w-[400px] max-w-[300px] py-4 px-6 shadow-lg active:scale-110 active:z-10 transition-shadow duration-300"
+    <article
+      className="flex flex-col gap-4 h-full border border-gray-700 sm:max-w-[400px] max-w-[300px] py-5 px-6 shadow-lg hover:border-gray-500 active:scale-105 active:z-10 transition-all duration-300 rounded-sm"
+      aria-label={`Testimonial from ${client.name}`}
     >
-      {/* Content */}
-      <div className="flex flex-col justify-between">
-        <p className={`leading-[130%] font-light mb-2 before:content-['"'] before:mr-1 after:ml-1 after:content-['"']`}>
-          {client.report}
-        </p>
-        <h3 className="text-sm font-black">
-          {client.name}
-        </h3>
-        <span className="text-xs opacity-50 font-light">
-          {client.title}
-        </span>
-
+      {/* 5-star rating */}
+      <div className="flex gap-0.5" aria-label="5 out of 5 stars">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} className="w-4 h-4 text-secondary fill-current flex-shrink-0" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
       </div>
-    </div>
+
+      {/* Quote */}
+      <p className="leading-[140%] font-light text-sm opacity-90 before:content-['“'] before:mr-0.5 after:ml-0.5 after:content-['”']">
+        {client.report}
+      </p>
+
+      {/* Author */}
+      <div>
+        <h3 className="text-sm font-bold">{client.name}</h3>
+        <span className="text-xs opacity-50 font-light">{client.title}</span>
+      </div>
+    </article>
   );
 }
