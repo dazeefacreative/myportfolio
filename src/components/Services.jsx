@@ -28,7 +28,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.4, ease: "easeIn" }}
             className="max-w-sm lg:max-w-lg text-center sm:text-start opacity-80 leading-relaxed"
           >
-            Whether you're launching a new product, rebranding an existing business, or scaling a platform — I bring the technical depth and design sensibility to get it done right.
+            Whether you're launching a new product, rebranding an existing business, or scaling a platform, I bring the technical depth and design sensibility to get it done right.
           </motion.p>
         </div>
 

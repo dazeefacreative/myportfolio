@@ -8,19 +8,19 @@ const clients = [
     id: 1,
     name: "Oladipupo Soidiq",
     title: "CEO, DJ OP DOT ENT",
-    report: "I'm extremely impressed with the final product. The website is visually stunning, professionally designed, and loads exceptionally fast. He delivered exactly what I envisioned — and more. Highly recommended!"
+    report: "I'm extremely impressed with the final product. The website is visually stunning, professionally designed, and loads exceptionally fast. He delivered exactly what I envisioned, and more. Highly recommended!"
   },
   {
     id: 2,
     name: "Hope Odabi",
     title: "CEO, Dabi Girl Media",
-    report: "My book design turned out so beautifully. I absolutely love what you did, and after printing it looks even more stunning. You handled everything perfectly — no back-and-forth, no supervision needed."
+    report: "My book design turned out so beautifully. I absolutely love what you did, and after printing it looks even more stunning. You handled everything perfectly, no back-and-forth, no supervision needed."
   },
   {
     id: 3,
     name: "Mansa Jabulani",
     title: "CEO, Music Distro",
-    report: "I love everything about the website — it's very neat and fast loading. The autoplay video on the homepage really impressed me. He's very creative. I absolutely love the result."
+    report: "I love everything about the website, it's very neat and fast loading. The autoplay video on the homepage really impressed me. He's very creative. I absolutely love the result."
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const clients = [
     id: 5,
     name: "Adekunle Jelil",
     title: "Co-Founder, ShowsNG",
-    report: "He really did a great job. We are very pleased with how he handled our client's website — the quality was excellent and delivery was remarkably fast. I highly recommend Dazeefa."
+    report: "He really did a great job. We are very pleased with how he handled our client's website, the quality was excellent and delivery was remarkably fast. I highly recommend Dazeefa."
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Experience() {
             viewport={{ once: true }}
             className="text-sm opacity-80 text-center sm:text-start max-w-lg leading-relaxed"
           >
-            Since 2014, I've partnered with founders, brands, and creative professionals across Africa and internationally — delivering design and development work that drives real business results.
+            Since 2014, I've partnered with founders, brands, and creative professionals across Africa and internationally, delivering design and development work that drives real business results.
           </motion.p>
 
           <div className="flex w-full items-center opacity-50 gap-4 justify-center sm:justify-start mt-6 mb-4">

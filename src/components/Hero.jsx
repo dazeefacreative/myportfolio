@@ -26,7 +26,7 @@ const skills = [
 
 const introTitle = "I turn your vision into a website that wins customers.";
 const introText =
-  "I help founders, startups, and growing businesses build premium websites that load fast, look stunning, and convert visitors into paying clients. From Figma to full-stack — I handle it all.";
+  "I help founders, startups, and growing businesses build premium websites that load fast, look stunning, and convert visitors into paying clients. From Figma to full-stack, I handle it all.";
 
 const scrollToSection = (id) => {
   const el = document.getElementById(id);
@@ -61,7 +61,7 @@ export default function Hero() {
   }, [displayText, isDeleting, phraseIndex]);
 
   return (
-    <section aria-label="Hero — Dazeefa Web Designer and Full-Stack Developer">
+    <section aria-label="Hero, Dazeefa Web Designer and Full-Stack Developer">
       <div className="relative flex flex-col lg:flex-row w-full justify-between items-center max-w-6xl mx-auto px-6 pb-8 pt-6">
         <motion.img
           src={backdrop}
@@ -93,7 +93,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
               className="block text-sm opacity-60 mb-2"
             >
-              Hi, I'm Dazeefa —
+              Hi, I'm Dazeefa,
             </motion.span>
 
             {phrases.length > 0 && (
@@ -115,7 +115,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
               className="lg:hidden w-full mt-8"
             >
-              <span className="text-xs opacity-50 tracking-[3px]">— What I do</span>
+              <span className="text-xs opacity-50 tracking-[3px] before:content-['-'] before:mr-1">What I do</span>
               <h2 className="font-body text-xl font-semibold mb-4 mt-2 leading-snug">{introTitle}</h2>
               <p className="opacity-60 text-sm mb-8 leading-relaxed">{introText}</p>
 
@@ -123,7 +123,7 @@ export default function Hero() {
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="flex items-center gap-2 text-sm bg-gradient-to-r from-primary to-secondary text-dark font-bold py-2.5 px-5 hover:scale-105 transition-transform"
-                  aria-label="Start a project — navigate to contact form"
+                  aria-label="Start a project"
                 >
                   <span>Start a Project</span>
                   <Icon icon="tabler:arrow-narrow-right" aria-hidden="true" />
@@ -131,7 +131,7 @@ export default function Hero() {
                 <button
                   onClick={() => scrollToSection("projects")}
                   className="flex items-center gap-2 text-sm border border-gray-500 py-2.5 px-5 hover:border-primary hover:text-primary transition-colors"
-                  aria-label="View my work — navigate to projects"
+                  aria-label="View my work"
                 >
                   <span>View My Work</span>
                 </button>
@@ -170,7 +170,7 @@ export default function Hero() {
           >
             <img
               src={heroImage}
-              alt="Dazeefa — Web Designer and Full-Stack Developer"
+              alt="Dazeefa, Web Designer and Full-Stack Developer"
               className="w-full h-full object-cover"
               loading="eager"
               fetchpriority="high"
@@ -185,7 +185,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
           className="hidden lg:block w-full max-w-[280px]"
         >
-          <span className="text-xs opacity-50 tracking-[3px] before:content-['—'] before:mr-2">What I do</span>
+          <span className="text-xs opacity-50 tracking-[3px] before:content-['-'] before:mr-2">What I do</span>
           <h2 className="font-body text-xl font-semibold mb-4 mt-2 leading-snug">{introTitle}</h2>
           <p className="opacity-60 text-sm mb-8 leading-relaxed">{introText}</p>
 
@@ -193,7 +193,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection("contact")}
               className="flex items-center justify-center gap-2 text-sm bg-gradient-to-r from-primary to-secondary text-dark font-bold py-2.5 px-5 hover:scale-105 transition-transform"
-              aria-label="Start a project — navigate to contact form"
+              aria-label="Start a project"
             >
               <span>Start a Project</span>
               <Icon icon="tabler:arrow-narrow-right" aria-hidden="true" />
@@ -202,7 +202,7 @@ export default function Hero() {
               <button
                 onClick={() => scrollToSection("projects")}
                 className="flex items-center gap-2 text-sm border border-gray-500 py-2 px-4 hover:border-primary hover:text-primary transition-colors"
-                aria-label="View my work — navigate to projects"
+                aria-label="View my work"
               >
                 View My Work
               </button>

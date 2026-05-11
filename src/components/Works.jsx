@@ -12,18 +12,18 @@ import scanmyframe from "../assets/images/scanmyframe.png";
 
 const worksData = [
   {
-    title: "SaaS Platform — Landing Page, Dashboard & Auth",
+    title: "SaaS Platform, Landing Page, Dashboard & Auth",
     client: "ScanMyFrame",
     image: scanmyframe,
     featured_image: scanmyframeFeaturedImg,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["Landing page", "User dashboard", "Authentication", "Custom blog", "Responsive design"],
     description:
-      "Built the complete digital infrastructure for a growing SaaS product — from a high-converting landing page to a fully functional user dashboard with authentication and a custom blog. The result: a polished, scalable platform ready to acquire and retain customers.",
+      "Built the complete digital infrastructure for a growing SaaS product, from a high-converting landing page to a fully functional user dashboard with authentication and a custom blog. The result: a polished, scalable platform ready to acquire and retain customers.",
     link: "https://scanmyframe.com",
   },
   {
-    title: "Community Brand Website — 7+ Pages",
+    title: "Community Brand Website, 7+ Pages",
     client: "Mumbossador",
     image: mumbossador,
     tags: ["Web Design", "Full-Stack Dev"],
@@ -33,24 +33,24 @@ const worksData = [
     link: "https://mumbossador.com",
   },
   {
-    title: "Media Management Platform — Full Web Experience",
+    title: "Media Management Platform, Full Web Experience",
     client: "DawEmpire",
     media: tdawempire,
     image: dawempire,
     tags: ["Web Development"],
     features: ["5+ page website", "Autoplay video hero", "Responsive design"],
     description:
-      "Engineered a media management platform with a cinematic landing page and seamless multi-page navigation. The autoplay video hero creates immediate brand impact — the kind that makes visitors stop scrolling and start paying attention.",
+      "Engineered a media management platform with a cinematic landing page and seamless multi-page navigation. The autoplay video hero creates immediate brand impact, the kind that makes visitors stop scrolling and start paying attention.",
     link: "https://dawempire.com",
   },
   {
-    title: "Coaching Business Website — 7+ Pages",
+    title: "Coaching Business Website, 7+ Pages",
     client: "Ignite2Transform",
     image: ignite2transform,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["7+ page website", "Lead generation", "Responsive design"],
     description:
-      "Developed a comprehensive multi-page website for a coaching business that needed to establish credibility fast. Strong visual hierarchy and a clear content flow guide visitors from first impression straight to booking — designed with conversion as the primary objective.",
+      "Developed a comprehensive multi-page website for a coaching business that needed to establish credibility fast. Strong visual hierarchy and a clear content flow guide visitors from first impression straight to booking, with conversion as the primary objective.",
     link: "https://ignite2transform.com",
   },
 ];
@@ -93,7 +93,7 @@ export default function Works() {
           viewport={{ once: true }}
           className="text-center text-sm opacity-80 max-w-3xl mx-auto my-8 leading-relaxed"
         >
-          From concept to production — I design and build websites that look premium and perform at the highest level.
+          From concept to production, I design and build websites that look premium and perform at the highest level.
           Figma to full-stack, no handoffs, no gaps. One person who thinks like a designer and executes like a senior engineer.
           <br />
           <strong className="opacity-100">
@@ -121,7 +121,7 @@ export default function Works() {
                   {!work.media ? (
                     <img
                       src={work.featured_image || work.image}
-                      alt={`${work.client} — ${work.title}`}
+                      alt={`${work.client}, ${work.title}`}
                       className="w-full object-cover"
                       loading="lazy"
                     />
@@ -215,7 +215,7 @@ export default function Works() {
                     <div className={`relative ${zoomIn ? "md:w-[500px] p-8" : "w-full"} mx-auto`}>
                       <img
                         src={work.image}
-                        alt={`Full screenshot of ${work.client} — ${work.title}`}
+                        alt={`Full screenshot of ${work.client}, ${work.title}`}
                         className="w-full object-cover"
                       />
                       <Icon

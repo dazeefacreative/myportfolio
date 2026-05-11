@@ -13,8 +13,8 @@ export const services = [
 ];
 
 const serviceDetails = [
-  "Your product's success starts with how it feels to use. I design high-converting interfaces grounded in user psychology and brand strategy — so your users stay, explore, and take action. Every pixel is intentional, every flow is tested. Delivered in Figma, ready for handoff or direct development.",
-  "I build fast, scalable web applications engineered for performance and growth. From custom APIs to complex dashboards, I architect and ship production-ready products using React.js, Node.js, Supabase, PostgreSQL, and Webflow — all under one roof.",
+  "Your product's success starts with how it feels to use. I design high-converting interfaces grounded in user psychology and brand strategy, so your users stay, explore, and take action. Every pixel is intentional, every flow is tested. Delivered in Figma, ready for handoff or direct development.",
+  "I build fast, scalable web applications engineered for performance and growth. From custom APIs to complex dashboards, I architect and ship production-ready products using React.js, Node.js, Supabase, PostgreSQL, and Webflow, all under one roof.",
   "Your brand deserves to stand out in crowded feeds. I create compelling, on-brand social media visuals that capture attention, communicate your value clearly, and keep your audience coming back. Cohesive, scroll-stopping, strategy-led design.",
 ];
 

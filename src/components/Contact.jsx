@@ -26,7 +26,7 @@ const contactMethods = [
     icon: "line-md:map-marker-multiple-alt-filled",
     iconHover: "line-md:map-marker-multiple-alt-filled-loop",
     label: "Location",
-    value: "Nigeria — Available Remotely",
+    value: "Nigeria, Available Remotely",
     href: "https://maps.app.goo.gl/STd7muctp6vwyqe3A",
     external: true,
   },
@@ -124,7 +124,7 @@ export default function Contact() {
             Ready to Start Your Project?
           </h2>
           <p className="text-sm opacity-60 mt-3 max-w-lg leading-relaxed">
-            Tell me about your project and I'll get back to you within 24 hours. No commitment, no pressure — just a conversation about how I can help.
+            Tell me about your project and I'll get back to you within 24 hours. No commitment, no pressure, just a conversation about how I can help.
           </p>
         </div>
 

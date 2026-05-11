@@ -16,7 +16,7 @@ export default function Footer() {
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="text-2xl font-black"
-            aria-label="Dazeefa Creative — back to top"
+            aria-label="Dazeefa Creative, back to top"
           >
             Dazeefa<span className="text-primary">.</span>
           </a>

@@ -35,7 +35,7 @@ export default function Header() {
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="text-2xl font-black"
-            aria-label="Dazeefa Creative — back to top"
+            aria-label="Dazeefa Creative, back to top"
           >
             Dazeefa<span className="text-primary">.</span>
           </a>
@@ -63,7 +63,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.7 }}
               onClick={() => scrollToSection("contact")}
               className="ml-4 px-5 py-2 bg-gradient-to-r from-primary to-secondary text-dark font-bold text-sm rounded hover:scale-105 transition-transform duration-200"
-              aria-label="Hire me — navigate to contact"
+              aria-label="Hire me"
             >
               Hire Me
             </motion.button>

@@ -12,7 +12,7 @@ const process = [
   {
     step: "01",
     title: "Discovery Call",
-    desc: "We start with a conversation about your goals, timeline, and budget — no commitment required. I ask the right questions so I can give you the right solution.",
+    desc: "We start with a conversation about your goals, timeline, and budget, no commitment required. I ask the right questions so I can give you the right solution.",
   },
   {
     step: "02",
@@ -22,7 +22,7 @@ const process = [
   {
     step: "03",
     title: "Build & Iterate",
-    desc: "I build your project with regular progress updates and feedback loops. You're never left wondering what's happening — clear milestones, zero surprises.",
+    desc: "I build your project with regular progress updates and feedback loops. You're never left wondering what's happening, clear milestones, zero surprises.",
   },
   {
     step: "04",
@@ -37,7 +37,7 @@ export default function About() {
       <div className="w-full max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-          {/* Left — copy */}
+          {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,13 +50,13 @@ export default function About() {
               I'm a business partner.
             </h2>
             <p className="opacity-70 text-sm leading-relaxed mb-5">
-              I've been in the digital space since 2014 — long enough to know that great code without great design is wasted, and great design without great execution is just a dream. I bridge that gap.
+              I've been in the digital space since 2014, long enough to know that great code without great design is wasted, and great design without great execution is just a dream. I bridge that gap.
             </p>
             <p className="opacity-70 text-sm leading-relaxed mb-5">
-              My work spans branding, UI/UX design, full-stack web development, and Webflow — for founders, startups, and creative professionals across Nigeria and internationally. Every project I take on gets my full attention, honest communication, and the same quality I'd expect if I were the client.
+              My work spans branding, UI/UX design, full-stack web development, and Webflow, for founders, startups, and creative professionals across Nigeria and internationally. Every project I take on gets my full attention, honest communication, and the same quality I'd expect if I were the client.
             </p>
             <p className="opacity-70 text-sm leading-relaxed mb-10">
-              I think like a designer, build like a senior engineer, and communicate like a trusted business partner. If you need someone who understands both the technical and commercial side of the web — that's exactly what I offer.
+              I think like a designer, build like a senior engineer, and communicate like a trusted business partner. If you need someone who understands both the technical and commercial side of the web, that's exactly what I offer.
             </p>
 
             {/* Strengths grid */}
@@ -77,7 +77,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right — process */}
+          {/* Right column */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
