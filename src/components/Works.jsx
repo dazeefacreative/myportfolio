@@ -9,8 +9,19 @@ import dawempire from "../assets/images/dawempire.png";
 import ignite2transform from "../assets/images/ignite2transform.png";
 import scanmyframeFeaturedImg from "../assets/images/scanframedashboard.jpg";
 import scanmyframe from "../assets/images/scanmyframe.png";
+import sturdylife from "../assets/images/sturdylife.png";
 
 const worksData = [
+  {
+    title: "E-commerce Storefront, Cart & Checkout",
+    client: "Sturdy Life",
+    image: sturdylife,
+    tags: ["Web Design", "Full-Stack Dev"],
+    features: ["Product catalog", "Cart & checkout", "Payment integration", "Responsive design"],
+    description:
+      "Built a full-stack e-commerce storefront from the ground up, covering product browsing, cart, checkout, and payment integration. Clean, conversion-focused design paired with a reliable purchase flow customers can trust.",
+    link: "https://sturdylifer.com",
+  },
   {
     title: "SaaS Platform, Landing Page, Dashboard & Auth",
     client: "ScanMyFrame",
@@ -207,7 +218,7 @@ export default function Works() {
                 {openIndex === index && (
                   <div
                     ref={fullImageRef}
-                    className="fixed inset-0 z-30 overflow-auto no-scrollbar bg-gray-900/98 md:p-8"
+                    className="fixed inset-0 z-[60] overflow-auto no-scrollbar bg-gray-900/98 md:p-8"
                     role="dialog"
                     aria-modal="true"
                     aria-label={`Full preview: ${work.title}`}
