@@ -37,6 +37,15 @@ export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState(phrases[0]);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 640px)");
+    setIsDesktop(mql.matches);
+    const onChange = (e) => setIsDesktop(e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
@@ -63,17 +72,19 @@ export default function Hero() {
   return (
     <section aria-label="Hero, Dazeefa Web Designer and Full-Stack Developer">
       <div className="relative flex flex-col lg:flex-row w-full justify-between items-center max-w-6xl mx-auto px-6 pb-8 pt-6">
-        <motion.img
-          src={backdrop}
-          alt=""
-          role="presentation"
-          width={432}
-          height={448}
-          className="hidden sm:block absolute z-1 w-[280px] lg:w-[350px] top-10 right-4 lg:left-1/2"
-          initial={{ opacity: 1, scale: 0.5, x: "-50%" }}
-          animate={{ opacity: 1, scale: 1, x: "-50%" }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
+        {isDesktop && (
+          <motion.img
+            src={backdrop}
+            alt=""
+            role="presentation"
+            width={432}
+            height={448}
+            className="absolute z-1 w-[280px] lg:w-[350px] top-10 right-4 lg:left-1/2"
+            initial={{ opacity: 1, scale: 0.5, x: "-50%" }}
+            animate={{ opacity: 1, scale: 1, x: "-50%" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          />
+        )}
 
         <div className="flex items-center">
           <div className="w-full z-10 min-w-[310px] mx-auto lg:min-w-[500px]">
@@ -163,22 +174,24 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ x: -80, y: 80 }}
-            animate={{ x: 0, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="hidden sm:block w-full max-w-[500px] lg:-ml-[300px] z-10"
-          >
-            <img
-              src={heroImage}
-              alt="Dazeefa, Web Designer and Full-Stack Developer"
-              width={791}
-              height={835}
-              className="w-full h-full object-cover"
-              loading="eager"
-              fetchpriority="high"
-            />
-          </motion.div>
+          {isDesktop && (
+            <motion.div
+              initial={{ x: -80, y: 80 }}
+              animate={{ x: 0, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="w-full max-w-[500px] lg:-ml-[300px] z-10"
+            >
+              <img
+                src={heroImage}
+                alt="Dazeefa, Web Designer and Full-Stack Developer"
+                width={791}
+                height={835}
+                className="w-full h-full object-cover"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </motion.div>
+          )}
         </div>
 
         {/* Desktop intro sidebar */}
