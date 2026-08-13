@@ -35,7 +35,7 @@ const scrollToSection = (id) => {
 
 export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const [displayText, setDisplayText] = useState(phrases[0]);
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
