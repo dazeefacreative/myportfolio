@@ -35,7 +35,7 @@ const scrollToSection = (id) => {
 
 export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState(phrases[0]);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -165,8 +165,7 @@ export default function Hero() {
 
           <motion.div
             initial={{ x: -80, y: 80 }}
-            whileInView={{ x: 0, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            animate={{ x: 0, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="hidden sm:block w-full max-w-[500px] lg:-ml-[300px] z-10"
           >

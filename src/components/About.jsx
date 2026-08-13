@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
 const strengths = [
-  { icon: "tabler:code", label: "11+ Years Building" },
+  { icon: "tabler:code", label: "3+ Years Building" },
   { icon: "tabler:world", label: "Remote-First" },
   { icon: "tabler:clock-hour-4", label: "Fast Turnaround" },
   { icon: "tabler:message-circle-check", label: "Clear Communication" },
