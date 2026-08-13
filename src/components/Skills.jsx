@@ -72,51 +72,6 @@ export default function Skills(){
                             transition={{ type: "spring", stiffness: 300 }}
                             className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
                             >
-                            <Icon icon={"logos:figma"} className="absolute -top-5 left-5 text-4xl" />
-                            <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">Figma</span>
-                                <span className="text-sm opacity-50">85%</span>
-                            </div>
-                            <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-[85%]"></div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            variants={cardVariants}
-                            whileHover={{ scale: 1.15 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
-                            >
-                            <Icon icon={"logos:adobe-photoshop"} className="absolute -top-5 left-5 text-4xl" />
-                            <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">Photoshop</span>
-                                <span className="text-sm opacity-50">95%</span>
-                            </div>
-                            <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-[95%]"></div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            variants={cardVariants}
-                            whileHover={{ scale: 1.15 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
-                            >
-                            <Icon icon={"logos:adobe-illustrator"} className="absolute -top-5 left-5 text-4xl" />
-                            <div className="flex w-full justify-between">
-                                <span className="text-sm opacity-80">Illustrator</span>
-                                <span className="text-sm opacity-50">65%</span>
-                            </div>
-                            <div className="w-full h-1 bg-gray-700 rounded-full">
-                                <div className="h-full bg-gradient-to-r from-orange-900 to-orange-500 rounded-full w-[65%]"></div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            variants={cardVariants}
-                            whileHover={{ scale: 1.15 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
-                            >
                             <Icon icon={"logos:react"} className="absolute -top-5 left-5 text-4xl" />
                             <div className="flex w-full justify-between">
                                 <span className="text-sm opacity-80">React.js</span>
@@ -201,6 +156,51 @@ export default function Skills(){
                                 <div className="h-full bg-gradient-to-r from-cyan-900 to-cyan-400 rounded-full w-[85%]"></div>
                             </div>
                         </motion.div>                    
+                        <motion.div
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.15 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
+                            >
+                            <Icon icon={"logos:figma"} className="absolute -top-5 left-5 text-4xl" />
+                            <div className="flex w-full justify-between">
+                                <span className="text-sm opacity-80">Figma</span>
+                                <span className="text-sm opacity-50">85%</span>
+                            </div>
+                            <div className="w-full h-1 bg-gray-700 rounded-full">
+                                <div className="h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-[85%]"></div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.15 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
+                            >
+                            <Icon icon={"logos:adobe-photoshop"} className="absolute -top-5 left-5 text-4xl" />
+                            <div className="flex w-full justify-between">
+                                <span className="text-sm opacity-80">Photoshop</span>
+                                <span className="text-sm opacity-50">95%</span>
+                            </div>
+                            <div className="w-full h-1 bg-gray-700 rounded-full">
+                                <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-[95%]"></div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.15 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="relative flex flex-col gap-4 justify-between items-end bg-veryDark rounded-lg p-6"
+                            >
+                            <Icon icon={"logos:adobe-illustrator"} className="absolute -top-5 left-5 text-4xl" />
+                            <div className="flex w-full justify-between">
+                                <span className="text-sm opacity-80">Illustrator</span>
+                                <span className="text-sm opacity-50">65%</span>
+                            </div>
+                            <div className="w-full h-1 bg-gray-700 rounded-full">
+                                <div className="h-full bg-gradient-to-r from-orange-900 to-orange-500 rounded-full w-[65%]"></div>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>

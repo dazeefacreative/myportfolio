@@ -16,6 +16,8 @@ const worksData = [
     title: "E-commerce Storefront, Cart & Checkout",
     client: "Sturdy Life",
     image: sturdylife,
+    imageWidth: 1200,
+    imageHeight: 4600,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["Product catalog", "Cart & checkout", "Payment integration", "Responsive design"],
     description:
@@ -26,7 +28,11 @@ const worksData = [
     title: "SaaS Platform, Landing Page, Dashboard & Auth",
     client: "ScanMyFrame",
     image: scanmyframe,
+    imageWidth: 1900,
+    imageHeight: 8000,
     featured_image: scanmyframeFeaturedImg,
+    featuredImageWidth: 2636,
+    featuredImageHeight: 1525,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["Landing page", "User dashboard", "Authentication", "Custom blog", "Responsive design"],
     description:
@@ -37,6 +43,8 @@ const worksData = [
     title: "Community Brand Website, 7+ Pages",
     client: "Mumbossador",
     image: mumbossador,
+    imageWidth: 1901,
+    imageHeight: 10187,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["7+ page website", "Custom blog", "Responsive design"],
     description:
@@ -48,6 +56,8 @@ const worksData = [
     client: "DawEmpire",
     media: tdawempire,
     image: dawempire,
+    imageWidth: 1901,
+    imageHeight: 8099,
     tags: ["Web Development"],
     features: ["5+ page website", "Autoplay video hero", "Responsive design"],
     description:
@@ -58,6 +68,8 @@ const worksData = [
     title: "Coaching Business Website, 7+ Pages",
     client: "Ignite2Transform",
     image: ignite2transform,
+    imageWidth: 1901,
+    imageHeight: 5659,
     tags: ["Web Design", "Full-Stack Dev"],
     features: ["7+ page website", "Lead generation", "Responsive design"],
     description:
@@ -133,6 +145,8 @@ export default function Works() {
                     <img
                       src={work.featured_image || work.image}
                       alt={`${work.client}, ${work.title}`}
+                      width={work.featured_image ? work.featuredImageWidth : work.imageWidth}
+                      height={work.featured_image ? work.featuredImageHeight : work.imageHeight}
                       className="w-full object-cover"
                       loading="lazy"
                     />
@@ -227,6 +241,8 @@ export default function Works() {
                       <img
                         src={work.image}
                         alt={`Full screenshot of ${work.client}, ${work.title}`}
+                        width={work.imageWidth}
+                        height={work.imageHeight}
                         className="w-full object-cover"
                       />
                       <Icon

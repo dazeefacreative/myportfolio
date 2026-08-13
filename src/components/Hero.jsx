@@ -67,8 +67,10 @@ export default function Hero() {
           src={backdrop}
           alt=""
           role="presentation"
+          width={432}
+          height={448}
           className="hidden sm:block absolute z-1 w-[280px] lg:w-[350px] top-10 right-4 lg:left-1/2"
-          initial={{ opacity: 0, scale: 0.5, x: "-50%" }}
+          initial={{ opacity: 1, scale: 0.5, x: "-50%" }}
           animate={{ opacity: 1, scale: 1, x: "-50%" }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
@@ -78,7 +80,7 @@ export default function Hero() {
 
             {/* Availability badge */}
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 1, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
               className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 border border-secondary/40 rounded-full bg-secondary/10"
@@ -88,7 +90,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.span
-              initial={{ opacity: 0, x: 80 }}
+              initial={{ opacity: 1, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
               className="block text-sm opacity-60 mb-2"
@@ -98,7 +100,7 @@ export default function Hero() {
 
             {phrases.length > 0 && (
               <motion.h1
-                initial={{ opacity: 0, x: 80 }}
+                initial={{ opacity: 1, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                 className="text-3xl lg:text-4xl h-20 max-w-[300px] sm:max-w-[340px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
@@ -110,7 +112,7 @@ export default function Hero() {
 
             {/* Mobile intro */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 1, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
               className="lg:hidden w-full mt-8"
@@ -140,7 +142,7 @@ export default function Hero() {
 
             {/* Social links */}
             <motion.div
-              initial={{ opacity: 0, x: 80 }}
+              initial={{ opacity: 1, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="flex gap-3 mt-16 lg:mt-32"
@@ -171,6 +173,8 @@ export default function Hero() {
             <img
               src={heroImage}
               alt="Dazeefa, Web Designer and Full-Stack Developer"
+              width={791}
+              height={835}
               className="w-full h-full object-cover"
               loading="eager"
               fetchpriority="high"
@@ -180,7 +184,7 @@ export default function Hero() {
 
         {/* Desktop intro sidebar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 1, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
           className="hidden lg:block w-full max-w-[280px]"

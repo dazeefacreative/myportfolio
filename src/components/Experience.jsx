@@ -64,7 +64,7 @@ export default function Experience() {
               className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left"
             >
               <Counter
-                end={new Date().getFullYear() - 2014}
+                end={new Date().getFullYear() - 2023}
                 duration={1}
                 className="text-3xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent"
               />
@@ -84,7 +84,7 @@ export default function Experience() {
               className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left"
             >
               <Counter
-                end={250}
+                end={10}
                 duration={1.2}
                 className="text-3xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent"
               />
@@ -104,7 +104,7 @@ export default function Experience() {
               className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left"
             >
               <Counter
-                end={200}
+                end={10}
                 duration={1.2}
                 className="text-3xl font-heading bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent"
               />
