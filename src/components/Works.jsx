@@ -1,7 +1,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Icon } from "@iconify/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 import mumbossador from "../assets/images/mumbossador.png";
 import tdawempire from "../assets/videos/dawempire.mp4";
@@ -78,6 +78,37 @@ const worksData = [
   },
 ];
 
+function LazyVideo({ src, posterSrc, posterWidth, posterHeight, alt, className }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "200px" });
+
+  return (
+    <div ref={ref} className="w-full">
+      {isInView ? (
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          className={className}
+          aria-label={alt}
+        />
+      ) : (
+        <img
+          src={posterSrc}
+          alt={alt}
+          width={posterWidth}
+          height={posterHeight}
+          className={className}
+          loading="lazy"
+        />
+      )}
+    </div>
+  );
+}
+
 export default function Works() {
   const [openIndex, setOpenIndex] = useState(null);
   const [zoomIn, setZoomIn] = useState(false);
@@ -151,14 +182,13 @@ export default function Works() {
                       loading="lazy"
                     />
                   ) : (
-                    <video
+                    <LazyVideo
                       src={work.media}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                      posterSrc={work.image}
+                      posterWidth={work.imageWidth}
+                      posterHeight={work.imageHeight}
+                      alt={`${work.client} website preview`}
                       className="w-full object-cover"
-                      aria-label={`${work.client} website preview`}
                     />
                   )}
                   <a
