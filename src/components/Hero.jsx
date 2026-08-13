@@ -8,6 +8,12 @@ import heroImage from "../assets/images/dazeefa.png";
 import backdrop from "../assets/images/backdrop.png";
 import cv from "../resume/Dazeefa Resume Web Design & Dev.pdf";
 
+const phrases = [
+  "UI/UX Designer",
+  "Full-Stack Developer",
+  "Webflow Expert",
+];
+
 const skills = [
   "Web Design",
   "Full-Stack Development",
@@ -28,6 +34,9 @@ const scrollToSection = (id) => {
 };
 
 export default function Hero() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [displayText, setDisplayText] = useState(phrases[0]);
+  const [isDeleting, setIsDeleting] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -37,6 +46,28 @@ export default function Hero() {
     mql.addEventListener("change", onChange);
     return () => mql.removeEventListener("change", onChange);
   }, []);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayText(currentPhrase.substring(0, displayText.length + 1));
+        if (displayText === currentPhrase) {
+          setTimeout(() => setIsDeleting(true), 1400);
+        }
+      } else {
+        setDisplayText(currentPhrase.substring(0, displayText.length - 1));
+        if (displayText === "") {
+          setIsDeleting(false);
+          setPhraseIndex((prev) => (prev + 1) % phrases.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, phraseIndex]);
 
   return (
     <section aria-label="Hero, Dazeefa Web Designer and Full-Stack Developer">
@@ -78,14 +109,17 @@ export default function Hero() {
               Hi, I'm Dazeefa,
             </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 1, x: 80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              className="text-3xl lg:text-4xl h-20 max-w-[300px] sm:max-w-[340px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-            >
-              Full-Stack Developer
-            </motion.h1>
+            {phrases.length > 0 && (
+              <motion.h1
+                initial={{ opacity: 1, x: 80 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                className="text-3xl lg:text-4xl h-20 max-w-[300px] sm:max-w-[340px] pr-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+              >
+                {displayText}
+                <span className="animate-blink border-r-2 border-secondary ml-0.5" aria-hidden="true" />
+              </motion.h1>
+            )}
 
             {/* Mobile intro */}
             <motion.div
